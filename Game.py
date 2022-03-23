@@ -9,7 +9,11 @@ class Game:
     def rules(self):
         print ("1.The Game is played to best of three!-The first player to reach two wins, wins the Game."
                 "2.Heres how to win-"
-                   "-Rock crushes Scissors and Lizard")
-game_rules = Game()
-                  
-print (game_rules.rules)                  
+                   "-Rock crushes Scissors and Lizard"
+                   "-Paper covers rock and disproves Spock.
+                   "-Scissors cuts paper and decapitates Lizard.
+                   "-Lizard eats Paper and poisons Spock.
+                   "-Spock vaporizes Rock and smashes Scissors")
+
+                       
+                 
