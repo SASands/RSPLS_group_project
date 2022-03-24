@@ -41,5 +41,3 @@ class Game:
         else:
             print("There can only be two Players for this game(tell your third wheel, we're sorry) please choose again!")
             self.player_amount
-    
-   

@@ -10,8 +10,3 @@ class AI(Player):
         self.choice = random.choice(self.gesture_choices)
         print(f"Cyborg has chosen {self.choice}.")
         return self.choice
-
-
-        
-
-
