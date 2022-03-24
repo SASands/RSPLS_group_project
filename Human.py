@@ -6,12 +6,13 @@ class Human(Player):
     
    
     def choose_gesture(self):
+        print("Here are your options for Gestures to throw!' \n 'Rock, Paper, Scissors, Lizard, Spock. ")
         user_input = input('What gesture would you like to throw out?')
-        print('Rock, Paper, Scissors, Lizard, Spock')
         self.choice = user_input
         return self.choice    
 
 
-player_one = Human()
+player_one = Human("Player One")
 
-player_one.choose_gesture
+player_one.choose_gesture()
+
