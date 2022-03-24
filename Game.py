@@ -31,7 +31,14 @@ class Game:
             pass
 
 
-    def who_goes_first(self):
-        random.choice[Players] # Players is a list, create a list of players
-        print(f'Player {self.random.choice} has been chose to go first.')
-        pass
+    # def turn_order(self):
+    #     random.choice[Players] # Players is a list, create a list of players
+    #     print(f'Player {self.random.choice} has been chose to go first.')
+    #     pass
+    # 
+    # 
+   
+   
+game_go = Game()
+
+game_go.rules()
