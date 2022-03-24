@@ -4,10 +4,12 @@ import random
 class AI(Player):
     def __init__(self):
         super().__init__("Cyborg")
-
+    
+    
     def choose_gesture(self):
-        random.choice[self.gestures_choice]
-        print (self.choice)
+        list_of_gesture_options = random.choice(self.gesture_choices)
+        return list_of_gesture_options
+
         
-Cyborg = AI()
-Cyborg.choose_gesture()
+
+
