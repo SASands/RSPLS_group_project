@@ -1,4 +1,7 @@
-#create a welcome for the usre and figure out what class to put it in
+from Game import Game
 
-Cyborg = AI()
-Cyborg.choose_gesture()
+# Cyborg = AI()
+# Cyborg.choose_gesture()
+
+lets_play = Game().run_game
+lets_play()
