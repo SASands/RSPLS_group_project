@@ -12,13 +12,18 @@ class Game:
         self.player_ai = AI()
         self.rpsls = []
         
+    
+    
     def run_game(self):
-        self.welcome()
-        self.rules()
+        self.welcome_rules
         self.player_amount()
         self.what_beats_what()
         self.champion()
 
+    def start_more_games(self):
+        self.player_amount
+        self.what_beats_what
+        self.champion
 
     def welcome(self):
         print ("Welcome to Rock Paper Scissors Lizard Spock! Thanks for choosing to play RSPLS! Here are the Rules of engagement! Enjoy your game!  ")
@@ -27,6 +32,10 @@ class Game:
     def rules(self):
         print ("1.The Game is played to best of three!' \n '2.The first player to reach two wins, wins the Game.' \n '3.Heres how to win' \n ' -Rock crushes Scissors and Lizard' \n ' -Paper covers rock and disproves Spock.' \n ' -Scissors cuts paper and decapitates Lizard.' \n ' -Lizard eats Paper and poisons Spock.' \n ' -Spock vaporizes Rock and smashes Scissors")
 
+
+    def welcome_rules(self):
+        self.welcome
+        self.rules
 
     def player_amount(self):
         user_input = int(input('Is there one or two players that are playing this game? Press 1 or 2-'     ))
@@ -110,12 +119,17 @@ class Game:
             print("Spock wins!")
             self.player_ai.score += 1
 
+    def same_gesture(self):
+        if self.rpsls[0] == self.rpsls[1]:
+            self.start_more_games
+
     def what_beats_what(self):
         self.rock()
         self.paper()
         self.scissors()
         self.lizard()
         self.spock()
+        self.same_gesture()
 
 
     def champion(self):
@@ -125,6 +139,8 @@ class Game:
             print("Player 2 WINS!!!")
         elif self.player_ai == 2:
             print("Cyborg WINS!!!")
-        else:
-            self.player_amount()
+        while self.player_one.score != 2 or self.player_two.score != 2 or self.player_ai.score != 2:
+            self.start_more_games()
+
+    
             
