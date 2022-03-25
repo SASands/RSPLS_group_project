@@ -2,7 +2,6 @@ import random
 
 from Human import Human
 from AI import AI
-<<<<<<< HEAD
 
 
 
@@ -17,23 +16,9 @@ class Game:
         self.welcome()
         self.rules()
         self.player_amount()
+        self.what_beats_what()
 
 
-=======
-
-class Game:
-    def __init__(self):
-        self.player_one = Human('John')
-        self.player_two = Human('Mary')
-        self.player_ai = AI()
-        self.rps_ls = []
-    
-    
-    def run_game(self):
-        pass
-    
-    
->>>>>>> f50fa6cf4e647a721e64fcc6f16938d094f3df01
     def welcome(self):
         print ("Welcome to Rock Paper Scissors Lizard Spock! Thanks for choosing to play RSPLS! Here are the Rules of engagement! Enjoy your game!  ")
 
@@ -46,74 +31,87 @@ class Game:
         user_input = int(input('Is there one or two players that are playing this game? Press 1 or 2-'     ))
         if user_input == 1:
             self.player_one.choose_gesture()
-<<<<<<< HEAD
             self.rpsls.append(self.player_one.choice)
             self.player_ai.choose_gesture()
             self.rpsls.append(self.player_ai.choice)
-=======
-            self.rps_ls.append(self.player_one.choice)
-            self.player_ai.choose_gesture()
-            self.rps_ls.append(self.player_ai.choice)
-
-            pass
-    
->>>>>>> f50fa6cf4e647a721e64fcc6f16938d094f3df01
         elif user_input == 2:
             self.player_one.choose_gesture()
             self.rpsls.append(self.player_one.choice)
             self.player_two.choose_gesture()
             self.rpsls.append(self.player_two.choice)
         else:
-<<<<<<< HEAD
             print("There can only be two Players for this game(tell your third wheel, we're sorry) please choose again!")
             self.player_amount
-=======
-            pass
-
-   
-   
-   
-   
-   
-   
-   
-   
-   
-    def rock_beats(self):
-        if self.rps_ls[0] == "rock" and self.rps_ls[1] == "scissors" or  self.rps_ls[1] == "lizard":
-
-            print(f"{}}")
-       
-       
-       
-       
-       
-       
-        # if Human().choice == "rock" and AI.choice == scissors or lizard:
-        #     print(human wins!)
-        #     Human.score += 1
-       
-    def paper_beats():
-        pass
-       
-
-    def scissors_beats():
-        pass
-
-    def lizard_beats():
-        pass
-
-    def spock_beats():
-        pass
 
 
+    def rock(self):
+        if self.rpsls[0] == "rock" and self.rpsls[1] == "lizard" or self.rpsls[0] == "rock" and self.rpsls[1] == "scissors":
+            print("Rocks wins!")
+            self.player_one.score += 1
+        elif self.rpsls[1] == "rock" and self.rpsls[0] == "lizard" or self.rpsls[1] == "rock" and self.rpsls[0] == "scissors":
+            print("Rocks wins!")
+            self.player_two.score += 1
+        elif self.rpsls[1] == "rock" and self.rpsls[0] == "lizard" or self.rpsls[1] == "rock" and self.rpsls[0] == "scissors":
+            print("Rock wins!")
+            self.player_ai.score += 1
+
+            
+    def paper(self):
+        if self.rpsls[0] == "paper" and self.rpsls[1] == "rock" or self.rpsls[0] == "paper" and self.rpsls[1] == "spock":
+            print("Paper wins!")
+            self.player_one.score += 1
+        elif self.rpsls[1] == "paper" and self.rpsls[0] == "rock" or self.rpsls[1] == "paper" and self.rpsls[0] == "spock":
+            print("Paper wins!")
+            self.player_two.score += 1
+        elif self.rpsls[1] == "paper" and self.rpsls[0] == "rock" or self.rpsls[1] == "paper" and self.rpsls[0] == "spock":
+            print("Paper wins!")
+            self.player_ai.score += 1
+
+  
 
 
-    # def turn_order(self):
-    #     random.choice[Players] # Players is a list, create a list of players
-    #     print(f'Player {self.random.choice} has been chose to go first.')
-    #     pass
-    # 
-    # 
+    def scissors(self):
+        if self.rpsls[0] == "scissors" and self.rpsls[1] == "lizard" or  self.rpsls[0] == "scissors" and self.rpsls[1] == "paper":
+            print("Scissors wins!")
+            self.player_one.score += 1
+        elif self.rpsls[1] == "scissors" and self.rpsls[0] == "lizard" or self.rpsls[1] == "scissors" and self.rpsls[0] == "paper":
+            print("Scissors wins!")
+            self.player_two.score += 1
+        elif self.rpsls[1] == "scissors" and self.rpsls[0] == "lizard" or self.rpsls[1] == "scissors" and self.rpsls[0] == "paper":
+            print("Scissors wins!")
+            self.player_ai.score += 1
+
+
+
    
->>>>>>> f50fa6cf4e647a721e64fcc6f16938d094f3df01
+    def lizard(self):
+        if self.rpsls[0] == "lizard" and self.rpsls[1] == "paper" or self.rpsls[0] == "lizard" and self.rpsls[1] == "spock":
+            print("Lizard wins!")
+            self.player_one.score += 1
+        elif self.rpsls[1] == "lizard" and self.rpsls[0] == "paper" or self.rpsls[1] == "lizard" and self.rpsls[0] == "spock":
+            print("Lizard wins!")
+            self.player_two.score += 1
+        elif self.rpsls[1] == "lizard" and self.rpsls[0] == "paper" or self.rpsls[1] == "lizard" and self.rpsls[0] == "spock":
+            print("Lizard wins!")
+            self.player_ai.score += 1
+
+
+
+
+    def spock(self):
+        if self.rpsls[0] == "spock" and self.rpsls[1] == "scissors" or self.rpsls[0] == "spock" and self.rpsls[1] == "rock":
+            print("Spock wins!")
+            self.player_one.score += 1
+        elif self.rpsls[1] == "spock" and self.rpsls[0] == "scissors" or self.rpsls[1] == "spock" and self.rpsls[0] == "rock":
+            print("Spock wins!")
+            self.player_two.score += 1
+        elif self.rpsls[1] == "spock" and self.rpsls[0] == "scissors" or self.rpsls[1] == "spock" and self.rpsls[0] == "rock":
+            print("Spock wins!")
+            self.player_ai.score += 1
+
+    def what_beats_what(self):
+        self.rock()
+        self.paper()
+        self.scissors()
+        self.lizard()
+        self.spock()
