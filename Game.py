@@ -17,6 +17,7 @@ class Game:
         self.rules()
         self.player_amount()
         self.what_beats_what()
+        self.champion()
 
 
     def welcome(self):
@@ -115,3 +116,15 @@ class Game:
         self.scissors()
         self.lizard()
         self.spock()
+
+
+    def champion(self):
+        if self.player_one.score == 2:
+            print("Player 1 WINS!!!")
+        elif self.player_two.score == 2:
+            print("Player 2 WINS!!!")
+        elif self.player_ai == 2:
+            print("Cyborg WINS!!!")
+        else:
+            self.player_amount()
+            
